@@ -1,0 +1,17 @@
+<div class="cardDetails" *ngIf="details">
+  <div>
+    <img src="{{details.icon}}" />
+    <h2>{{details.name}}</h2>
+    <p>abv: {{details.abv}}</p>
+    <p>ibu: {{details.ibu}}</p>
+    <p>isOrganic: {{details.isOrganic}}</p>
+    <p>year: {{details.year}}</p>
+    <p>status: {{details.status}}</p>
+  </div>
+  <div *ngIf="details.glass">
+    <h3>Glass Deatils</h3>
+    <p> Name: {{details.glass.name}} </p>
+    <p> Id: {{details.glass.id}} </p>
+    <p> Date: {{details.glass.createDate}} </p>
+  </div>
+</div>

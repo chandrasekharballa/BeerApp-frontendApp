@@ -1,0 +1,22 @@
+<div *ngIf="beerList" class="container">
+  <!-- Displaying nearest houses to destination -->
+  <h3 style="padding:20px">Beer List</h3>
+  <div class="row" class="animated bounceInLeft">
+    <div *ngFor="let beer of beerList" class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-12 ]">
+      <ul class="event-list" (click)="details(beer)">
+        <li>
+          <img src="{{beer.icon}}" />
+          <div class="info">
+            <h2 class="title">{{beer.name}}</h2>
+            <p class="desc">abv: {{beer.abv}}</p>
+            <p class="desc">ibu: {{beer.ibu}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!beerList">
+  <h1>Please wait.......!</h1>
+</div>
